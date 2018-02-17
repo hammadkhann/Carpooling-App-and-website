@@ -1,0 +1,27 @@
+<?php
+
+
+require("conn.php");
+
+
+
+
+$query= "SELECT name,gender,d.email,contactno,image,address FROM Driver d,user_info u where d.Driver_id=1 and u.user_id = d.user_id";
+$result3 = mysqli_query($con,$query);
+while($row3 = mysqli_fetch_assoc($result3))
+{ 
+$array1=$row3['name'];
+$array2=$row3['gender'];
+$array3=$row3['email'];
+$array4=$row3['contactno'];
+$array5=$row3['image'];
+$array6=$row3['address'];
+
+echo $array1;
+echo $array2;
+echo $array3;
+}
+
+
+
+?>
